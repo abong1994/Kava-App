@@ -62,7 +62,7 @@ function page(title, body) {
     <body>
       <div class="row" style="justify-content:space-between;">
         <div>
-          <h2 style="margin:0;">🌿 Kava Export MVP</h2>
+          <h2 style="margin:0;">Kava Export MVP</h2>
           <div class="small">Farmers • Batches • Buyers • Requests • Offers</div>
         </div>
         <div class="row">
@@ -495,6 +495,9 @@ app.get("/requests", (req, res) => {
     </div>
     ${rows || `<div class="card">No requests yet.</div>`}
   `));
+});
+app.get("/health", (req, res) => {
+  res.send("ok");
 });
 
 const PORT = process.env.PORT || 3000;
